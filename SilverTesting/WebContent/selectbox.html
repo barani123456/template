@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link
+	href="http://cdn-na.infragistics.com/igniteui/2019.2/latest/css/themes/infragistics/infragistics.theme.css"
+	rel="stylesheet" />
+<link
+	href="http://cdn-na.infragistics.com/igniteui/2019.2/latest/css/structure/infragistics.css"
+	rel="stylesheet" />
+<script
+	src="http://ajax.aspnetcdn.com/ajax/modernizr/modernizr-2.8.3.js"></script>
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="http://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
+
+<!-- Ignite UI Required Combined JavaScript Files -->
+<script
+	src="http://cdn-na.infragistics.com/igniteui/2019.2/latest/js/infragistics.core.js"></script>
+
+	<script
+	src="js/infragistics.lob.js"></script>
+</head>
+<body>
+	<style>
+.combo-label {
+	margin-bottom: .5em;
+}
+</style>
+
+	<br />
+
+
+	<div id="checkboxSelectCombo"></div>
+
+	<script>
+		var names = [ {
+			Name : "先着"
+		}, {
+			Name : "抽選"
+		} ];
+
+		$(function() {
+			$("#checkboxSelectCombo").igCombo({
+				width : 200,
+				dataSource : names,
+				textKey : "Name",
+				valueKey : "Name",
+				multiSelection : {q
+					enabled : true,
+					showCheckboxes : true
+				},
+				dropDownOrientation : "bottom"
+			});
+
+		});
+	</script>
+
+</body>
+</html>
+

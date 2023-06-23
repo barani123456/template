@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet"
+	href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+<script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+<script src="/resources/demos/external/jquery.bgiframe-3.0.0.js"></script>
+<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+<link
+	href="http://cdn-na.infragistics.com/igniteui/2019.2/latest/css/themes/infragistics/infragistics.theme.css"
+	rel="stylesheet" />
+<link
+	href="http://cdn-na.infragistics.com/igniteui/2019.2/latest/css/structure/infragistics.css"
+	rel="stylesheet" />
+<script
+	src="http://ajax.aspnetcdn.com/ajax/modernizr/modernizr-2.8.3.js"></script>
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="http://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
+
+<!-- Ignite UI Required Combined JavaScript Files -->
+<script
+	src="http://cdn-na.infragistics.com/igniteui/2019.2/latest/js/infragistics.core.js"></script>
+
+	<script
+	src="js/infragistics.lob.js"></script>
+</head>
+<body>
+	<script>
+		var names = [ {
+			Name : "先着"
+		}, {
+			Name : "抽選"
+		} ];
+
+		$(function() {
+			$("#checkboxSelectCombo").igCombo({
+				width : 200,
+				dataSource : names,
+				textKey : "Name",
+				valueKey : "Name",
+				multiSelection : {
+					enabled : true,
+					showCheckboxes : true
+				},
+				dropDownOrientation : "bottom"
+			});
+
+		});
+	</script>
+	<style>
+.combo-label {
+	margin-bottom: .5em;
+}
+</style>
+	<table border="2">
+		<tr>
+			<th>Title1</th>
+			<th>Title2</th>
+			<th>Button1</th>
+			<th>Button2</th>
+		</tr>
+		<tr id="myTableRow">
+			<td>1</td>
+			<td>a</td>
+			<td><button class="add">追加</button></td>
+			<td><button class="delete">削除</button></td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>a</td>
+			<td><button class="add">追加</button></td>
+			<td><button class="delete">削除</button></td>
+		</tr>
+
+	</table>
+	<button id="aa">AAAA</button>
+
+	<div id="dialog" title="基本的なダイアログ">
+<table id="aa">
+<tr>
+<th>		<span id="checkboxSelectCombo"></span >
+		<!-- ダイアログで情報を表示する際に便利です。
+			ダイアログウインドウは移動とリサイズが可能で、また'x'アイコンで閉じることも出来ます。-->
+</th>
+</tr>
+</table>
+
+
+
+
+
+	</div>
+
+	<script>
+		$(function() {
+			$('#aa').on('click', function() {
+				alert("クリックされました");
+				$("#dialog").dialog({
+					modal : true,
+					title : "ダイアログのタイトル",
+					buttons : {
+						"削除" : function() {
+							$('#myTableRow').remove();
+							$(this).dialog("close");
+						},
+						"閉じる" : function() {
+							$(this).dialog("close");
+						},
+					}
+				});
+			});
+		});
+	</script>
+
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<div style="margin-left:30px;">
+<div style="width:70px;height:170px;background:black;border-radius:10px;padding:2px;">
+<div id="red" style="opacity:0.2;width:50px;height:50;background:rgb(255,0,0);border-radius:50%;box-shadow:0 0 20px rgba(255,0,0,1);margin:5px;">
+</div>
+<div id="orng" style="opacity:0.2;width:50px;height:50;background:rgb(255,180,0);border-radius:50%;box-shadow:0 0 20px rgba(255,180,0,1);margin:5px;">
+</div>
+<div id="grn" style="opacity:0.2;width:50px;height:50;background:rgb(0,255,0);border-radius:50%;box-shadow:0 0 20px rgba(0,255,0,1);">
+</div>
+</div>
+<br>
+<div style="height:70px;backdround:white;box-shadow:inset 0 0 15px rgba(0,0,0,0.4);border-radius:10px">
+<button id="btnr" onclick="togr()" style="width:90px;height:50px;margin:10px;border-radius:5px;background:red;">Stop</button>
+<button id="btno" onclick="togo()" style="width:90px;height:50px;margin:10px;border-radius:5px;background:rgb(255,200,0);">Ready</button>
+<button id="btng" onclick="togg()" style="width:90px;height:50px;margin:10px;border-radius:5px;background:rgb(0,255,0);">Go</button>
+
+</div>
+</div>
+
+<script>
+var btnr = document.getElementById("btn-r");
+var btno = document.getElementById("btn-o");
+var btng = document.getElementById("btn-g");
+
+var red = document.getElementById("red");
+var orng = document.getElementById("orng");
+var green = document.getElementById("grn");
+
+function togr(){
+ if(red.style.opacity){
+ red.style.opacity = "1";
+ grn.style.opacity = "0.2";
+ orng.style.opacity = "0.2";
+ }
+
+}
+
+function togo(){
+ if(orng.style.opacity){
+ orng.style.opacity = "1";
+ red.style.opacity = "0.2";
+ grn.style.opacity = "0.2";
+ }
+
+}
+
+function togg(){
+ if(grn.style.opacity){
+ grn.style.opacity = "1";
+ red.style.opacity = "0.2";
+ orng.style.opacity = "0.2";
+ }
+
+}
+</script>
+</body>
+</html>
