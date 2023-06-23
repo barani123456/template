@@ -3,8 +3,6 @@ package com.test.com;
 public class CheckingAccount {
 	public int amount;
 
-
-
 	public int getAmount() {
 		return amount;
 	}
